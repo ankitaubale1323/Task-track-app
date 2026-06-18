@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tasktracker-backend
+  namespace: tasktracker
 spec:
   replicas: 2
   selector:
@@ -55,8 +56,6 @@ spec:
               cpu: "500m"
               memory: "256Mi"
           # ── Readiness probe ───────────────────────────────
-          # Holds traffic until /health returns 200
-          # Prevents 500 errors during pod startup
           readinessProbe:
             httpGet:
               path: /health
@@ -65,7 +64,6 @@ spec:
             periodSeconds: 5
             failureThreshold: 3
           # ── Liveness probe ────────────────────────────────
-          # Restarts pod if it becomes unresponsive
           livenessProbe:
             httpGet:
               path: /health

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mysql
+  namespace: tasktracker
 spec:
   serviceName: mysql-service
   replicas: 1
@@ -61,6 +62,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mysql-service
+  namespace: tasktracker
 spec:
   selector:
     app: mysql
