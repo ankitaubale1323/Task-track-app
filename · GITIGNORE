@@ -1,0 +1,39 @@
+
+# Environment files — never commit these
+backend/.env
+*.env
+.env.*
+ 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+*.egg-info/
+ 
+# Node
+node_modules/
+frontend/dist/
+ 
+# Docker
+*.log
+ 
+# Security scan reports
+trivy-*.txt
+ 
+# SSH keys
+*.pem
+*.key
+ 
+# OS
+.DS_Store
+Thumbs.db
+ 
+# IDE
+.vscode/
+.idea/
+
+backend/.env
+*.env
+*.env
