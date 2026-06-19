@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-
-const API = "http://localhost:8000";
+const API = "http://54.235.12.155:8000";
 const PRIORITY_CONFIG = {
   critical: { color: "#ff2d55", bg: "#1a0008", badge: "#ff2d55", label: "🔴 CRITICAL", alert: true },
   high:     { color: "#ff9500", bg: "#1a0d00", badge: "#ff9500", label: "🟠 HIGH",     alert: true },
